@@ -35,6 +35,7 @@ steps:
     environmentServiceNameAzureRM: 'pipelinekas'
 
 - task: TerraformTask@5
+  displayName: terraform apply
   inputs:
     provider: 'azurerm'
     command: 'apply'
