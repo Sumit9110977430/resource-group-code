@@ -6,7 +6,7 @@ steps:
 - task: TerraformInstaller@1
   displayName: terraform install
   inputs:
-    terraformVersion: 'latest'
+    terraformVersion: '1.6.6'
 
 - task: TerraformTask@5
   displayName: terraform init
@@ -31,7 +31,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)\Prent Module'
+    workingDirectory: '$(System.DefaultWorkingDirectory)\Parent Module'
     environmentServiceNameAzureRM: 'pipelinekas'
 
 - task: TerraformTask@5
