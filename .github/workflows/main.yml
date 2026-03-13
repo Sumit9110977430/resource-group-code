@@ -1,0 +1,22 @@
+name: fristpipeline
+
+on: 
+ workflow_dispatch:
+
+jobs:
+  terraform_init:
+    name: terraform init
+    runs-on: ubuntu-latest
+    steps:
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.3
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        
+        
+  
+  
+  
+  
